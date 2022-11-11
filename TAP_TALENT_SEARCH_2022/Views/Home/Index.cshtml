@@ -1,0 +1,2095 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<html lang="en">
+ <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TAP_TALENT_SEARCH_2022</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+</head>
+  <body>
+
+<!-- Navbar-->
+                    <nav class="navbar navbar-expand-lg navbar-light" id="navbar_top">
+                                <div class="container-fluid justify-content-between">
+                                        <ul class="navbar-nav flex-row">
+                                            
+                                        </ul>
+                         <!-- Left elements -->
+                                     <div class="d-flex">
+                                                <!-- Brand -->
+                                            <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#"><img src="/lib/logo_1.png" height="60" alt="MDB Logo" loading="lazy" style="margin-top: 2px;"/></a>
+             <!-- Search form -->           <form class="input-group w-auto my-auto d-none d-sm-flex">
+                                            <input autocomplete="off" type="search" class="form-control rounded" placeholder="Search" style="min-width: 125px;"/>
+                                            </form>
+                                            </div>
+                        <!-- Left elements -->
+
+    <!-- Center elements -->
+                        <ul class="navbar-nav flex-row d-none d-md-flex">
+                            <li class="nav-item me-3 me-lg-1 active">
+                                 <a class="nav-link" href="#">
+                                <i id="Homebtn" class='fas fa-house-user' style='font-size:28px'></i>
+                                 </a>
+                                Home 
+                             </li>
+
+                              <li class="nav-item me-3 me-lg-1">
+                                <a class="nav-link" href="#">
+                                 <i  id="Homebtn" class='fas fa-user-circle' style='font-size:28px'></i>
+                                </a>
+                                Profile
+                              </li>
+
+                              <li class="nav-item me-3 me-lg-1">
+                                <a class="nav-link" href="#">
+                                 <i  id="Homebtn" class='fas fa-info-circle' style='font-size:28px'></i>
+                                </a>
+                                About
+                              </li>
+
+                             
+                              <li class="nav-item me-3 me-lg-1">
+                                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                                     
+                                             <div class="dropdown text-end">
+                                              <a href="#" class="d-block link-dark text-decoration-none " data-bs-toggle="dropdown" aria-expanded="false">
+                                              <i id="ProfileBtn" class='fas fa-user-circle' style='font-size:28px'></i>
+                                              </a>
+                                              <ul class="dropdown-menu text-small">
+                                                <li><a class="dropdown-item">Nicolo Azares</a></li>
+                                                <li><a class="dropdown-item">Software Developer</a></li>
+                                                <li><a class="dropdown-item">Taguig City,Philippines</a></li>
+
+                                                <li class="BtnProfile"> <a class="btn btn-outline-secondary" id="NameBtn" href="#" role="button">View Profile</a></li>
+
+                                                <li><hr id="hr" class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                                <li><hr id="hr" class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                                              </ul>
+                                            </div>
+                                      </div>
+                                     <label id="Me" >Me</label>
+                                                  </li>
+
+                                                   <li class="nav-item me-3 me-lg-1">
+                               <div class="vl"></div> 
+                              </li>
+
+                              <li class="nav-item me-3 me-lg-1">
+                                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                                     
+                                             <div class="dropdown text-end">
+                                              <a href="#" class="d-block link-dark text-decoration-none " data-bs-toggle="dropdown" aria-expanded="false">
+                                              <i id="page" class="fa fa-bars" style="font-size:28px"></i>
+                                              </a>
+                                              <ul id="DropdownPages" class="dropdown-menu text-small">  
+                                                  
+                                              <li class="BtnProfile"> <a class="btn btn-outline-secondary" id="NameBtns" role="button" href="#list-item-1">User Area</a></li>
+                                              <li class="BtnProfile"> <a class="btn btn-outline-secondary" id="NameBtns1" role="button" href="#list-item-2">Educational</a></li>
+                                              <li class="BtnProfile"> <a class="btn btn-outline-secondary" id="NameBtns2"  role="button" href="#list-item-3">Projects </a></li>
+                                              <li class="BtnProfile"> <a class="btn btn-outline-secondary" id="NameBtns3" role="button" href="#list-item-4">Training & Certificates</a></li>
+
+                                              </ul>
+                                            </div>
+                                      </div>
+                                     <label id="Pages">Page</label>
+                              </li>
+                                                </ul>
+                                                <ul class="navbar-nav flex-row"> </ul>
+    <!-- Right elements -->
+                                              </div>
+                                            </nav>
+
+   <!-- End Navbar Search and side bar button  -->
+
+   <!-- User Profile With Edit Button  -->
+
+    <div class="container mt-3">             
+                <div class="row"> 
+                        <div class="col">   
+                            <div class="shadow-lg mt-3 p-5 text-black rounded">
+                                         <div class="row">
+                                                <div class="col-md-10">
+                                                     <h1 id="list-item-1" >Nicolo Azares</h1> 
+                                                     <h5> Software Developer at Teleperformance </h5> 
+                                                     <h5> Taguig City, Philippines </h5> 
+                                                    </div>
+
+                                                 <div class="col-md-2">
+                                                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever=""><i class='far fa-edit' style='font-size:24px'></i> </button>
+                                                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                              <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Profile</h1>
+                                                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                         </div>
+                                              <div class="modal-body">
+      <!-- Start Form for Profile Edit   -->     <form>
+                                                  <div class="mb-3">
+                                                    <label for="recipient-name" class="col-form-label">Name:</label>
+                                                    <input type="text" class="form-control" id="recipient-name">
+                                                  </div>
+                                                  <div class="mb-3">
+                                                    <label for="recipient-name" class="col-form-label">Location:</label>
+                                                    <input type="text" class="form-control" id="recipient-name">
+                                                  </div>
+                                                  <div class="mb-3">
+                                                    <label for="recipient-name" class="col-form-label">Position:</label>
+                                                    <input type="text" class="form-control" id="recipient-name">
+                                                  </div>
+                                                  <div class="mb-3">
+                                                    <label for="recipient-name" class="col-form-label">Phone Number:</label>
+                                                    <input type="text" class="form-control" id="recipient-name">
+                                                  </div>
+                                                  <div class="mb-3">
+                                                    <label for="recipient-name" class="col-form-label">Email:</label>
+                                                    <input type="text" class="form-control" id="recipient-name">
+                                                  </div>
+         
+   <!-- END Form for Profile Edit   -->       </form>
+                                              </div>
+                                         <div class="modal-footer">
+                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                 <button type="button" class="btn btn-primary">Save</button>
+                                         </div>
+                                                </div>
+                                                    </div>
+                                                        </div>
+                                                            </div>
+                                                                </div>
+                                                                     <hr id="hr" />
+    <!-- END User Profile With Edit Button   -->
+
+    <!-- User Profile to View    -->
+
+                <div class="row">
+                         <div class="col-md-4">
+                                    <h5 class="mt-2 mb-3"><span class="far fa-address-card"></span> Name</h5>
+                                      <div class="row g-2">
+                                             <div class="col-auto">
+                                                 <input class="form-control" type="text" value="Nicolo Azares" aria-label="Disabled input example" disabled readonly>
+                                             </div>
+                                       </div>
+                                      <h5 class="mt-2 mb-3"><span class="fas fa-briefcase"></span> Position </h5>
+                                       <div class="row g-2">
+                                        <div class="col-auto">
+                                                 <input class="form-control" type="text" value="Software Developer" aria-label="Disabled input example" disabled readonly>
+                                         </div>
+                                         </div>
+                                         </div>
+                      
+                       <div class="col-md-4">
+                                   <h5 class="mt-2 mb-3"><span class="far fa-address-card"></span> Location</h5>
+                                   <div class="row g-2">
+                                         <div class="col-auto">
+                                                 <input class="form-control" type="text" value="Taguig City" aria-label="Disabled input example" disabled readonly>
+                                         </div>
+                                   </div>
+                                                 <h5 class="mt-2 mb-3"><span class="far fa-calendar-alt"></span> Phone Number </h5>
+                                        <div class="row g-2">
+                                         <div class="col-auto">
+                                                 <input class="form-control" type="text" value="09367495396" aria-label="Disabled input example" disabled readonly>
+                                          </div>
+                                             </div>
+                                                   </div>
+                         <div class="col-md-4">
+                                    <h5 class="mt-2 mb-3"><span class="far fa-chart-bar"></span> Email </h5>
+                                    <div class="row g-2">
+                                         <div class="col-auto">
+                                                 <input class="form-control" type="text" value="Nicoloazares10@gmail.com" aria-label="Disabled input example" disabled readonly>
+                                   </div>
+                             </div>
+                        </div>
+                            </div>
+                                 </div>
+                                        </div>
+
+  <!-- END User Profile to View    -->
+
+   <!-- Reporting to   -->
+
+    <div class="col-lg-4">
+        <div class="shadow-lg mt-3 p-5 text-black rounded">
+                 <h3  >Reporting to</h3> 
+                         <hr id="hr" />
+                         <div class="row g-2">
+                             <div class="col-auto">
+                                  <h5> Name : </h5>
+                            </div>
+                             <div class="col-auto">
+                                 <p> Ergio Mar Bugtong </p>
+                             </div>
+                         </div>
+
+                        <div class="row g-2">
+                            <div class="col-auto">
+                                <h5> Position : </h5>
+                            </div>
+                             <div class="col-auto">
+                                <p>Full Stack Developer </p>
+                             </div>
+                        </div>
+
+                         <div class="row g-2">
+
+                             <div class="col-auto">
+                                 <h5> Contact Number : </h5>
+                             </div>
+                            <div class="col-auto">
+                                <p> 0922222222 </p>
+                            </div>
+                        </div>
+                         <div class="row g-2">
+                            <div class="col-auto">
+                                <h5> Email : </h5>
+                            </div>
+                            <div class="col-auto">
+                                <p> Ergio@gmail.com </p>
+                            </div>
+                        </div>
+                            <hr id="hr" />
+
+              </div>
+                 </div>
+                         </div>
+
+     <!-- END Reporting to   -->
+
+     <!-- Educational Background   -->
+
+   <div class="row">
+                <div class="col">
+                        <div class="shadow-lg mt-3 p-5 text-black rounded">
+                                <div class="row"> 
+                                    <div class="col-md-10">
+                                        <h4 id="list-item-2" >Educational Background</h4> 
+                                    </div>
+                                     <div class="col-md-2">
+                                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#EducationalBackground" data-bs-whatever=""><i class='fas fa-plus' style='font-size:24px'></i> </button>
+                                            <div class="modal fade" id="EducationalBackground" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                         <div class="modal-header">
+                                                         <h1 class="modal-title fs-5" id="exampleModalLabel">Add Educational </h1>
+                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                         </div>
+                                                            <div class="modal-body">
+   <!-- Start Form for Educational Background   -->            <form>
+                                                                <div class="mb-3">
+                                                                <label for="recipient-name" class="col-form-label">School:</label>
+                                                                <input type="text" class="form-control" id="recipient-name">
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                <label for="recipient-name" class="col-form-label">Degree:</label>
+                                                                <input type="text" class="form-control" id="recipient-name">
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                <label for="recipient-name" class="col-form-label">Field of Study:</label>
+                                                                <input type="text" class="form-control" id="recipient-name">
+                                                                </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                        <br />
+                                                                        <p> Start Date </p>
+                                                                            <div class="btn-group">
+                                                                            <button id="MonthBtn" type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                            Month
+                                                                            </button> 
+                                                                            <ul class="dropdown-menu">
+                                                                            <li><a class="dropdown-item">  </a></li>
+                                                                            <li><a class="dropdown-item" >  </a></li>
+                                                                            <li><a class="dropdown-item" >  </a></li>
+                                                                            <li><a class="dropdown-item" >  </a></li>
+                                                                            <li><a class="dropdown-item" >  </a></li>
+                                                                            <li><a class="dropdown-item" >  </a></li>
+                                                                            <li><hr class="dropdown-divider"></li>
+                                                                            <li><a class="dropdown-item" > Separated link </a></li>
+                                                                            </ul>
+                                                                            </div>
+                                                                         </div>
+                                                                         <div class="col-md-6">
+                                                                         <br />
+                                                                         <p> Year Start </p>           
+                                                                         <div class="btn-group">
+                                                                         <button id="YrBtn" type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                         Year
+                                                                         </button>
+                                                                         <ul class="dropdown-menu">
+                                                                         <li><a class="dropdown-item"> 1 </a></li>
+                                                                         <li><a class="dropdown-item" > 2 </a></li>
+                                                                         <li><a class="dropdown-item" > 3 </a></li>               
+                                                                         </ul>
+                                                                         </div>
+                                                                         </div>
+                                                                         <div class="col-md-6">
+                                                                         <br />
+                                                                         <p> End Date </p>
+                                                                         <div class="btn-group">
+                                                                         <button id="MonthBtn" type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                          Month
+                                                                         </button> 
+                                                                            <ul class="dropdown-menu">
+                                                                            <li><a class="dropdown-item">  </a></li>
+                                                                            <li><a class="dropdown-item" >  </a></li>
+                                                                            <li><a class="dropdown-item" >  </a></li>
+                                                                            <li><a class="dropdown-item" >  </a></li>
+                                                                            <li><a class="dropdown-item" >  </a></li>
+                                                                            <li><a class="dropdown-item" >  </a></li>
+                                                                            <li><hr class="dropdown-divider"></li>
+                                                                            <li><a class="dropdown-item" > Separated link </a></li>
+                                                                            </ul>
+                                                                         </div>
+                                                                         </div>
+                                                                        <div class="col-md-6">
+                                                                        <br />
+                                                                        <p> End Year </p>           
+                                                                        <div class="btn-group">
+                                                                        <button id="YrBtn" type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                            Year
+                                                                        </button>
+                                                                            <ul class="dropdown-menu">
+                                                                            <li><a class="dropdown-item"> 1 </a></li>
+                                                                            <li><a class="dropdown-item" > 2 </a></li>
+                                                                            <li><a class="dropdown-item" > 3 </a></li>
+                                                                            </ul>
+
+                                                                        </div>
+                                                                        </div>
+                                                                     </div>
+                  <!-- END Form   -->                    </form>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Save</button>
+                                                                     </div>
+                                                                    </div>
+                                                              </div>
+                                                            </div>
+                                                         </div>
+                                                       </div>
+                                        <hr id="hr" />
+                                        <h5>Primary</h5>
+                                        <a>Espiritu Santo Parochial School</a>
+                                        <p>2016 - 2019</p>
+
+                                        <br />
+
+                                        <h5>Secondary</h5>
+                                        <a>Espiritu Santo Parochial School</a>
+                                        <p>2016 - 2019</p>
+
+                                        <br />
+
+                                        <h5>Tertiary</h5>
+                                        <a>University of Batangas</a>
+                                        <p>Bachelor of Science in Information of Technology</p>
+                                        <a>2016 - 2019</a>
+
+            </div>
+  </div>
+
+   <!-- END Educational Background   -->
+
+   <!-- Start Skills   -->
+  
+  <div class="col-lg-4">
+   <div class="shadow-lg mt-3 p-5 text-black rounded">
+       <div class="row">
+           <div class="col-md-10">
+       <h3>Skills</h3> 
+       </div>
+       
+
+    </div>
+    <hr id="hr" />
+
+     <!-- Technology   -->
+                   <p> <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#Technology" data-bs-whatever=""> Technology </button> </p> 
+
+                          <div class="modal fade" id="Technology" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Technology Skill</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+            <div class="row">
+
+        <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Technology Skill 
+            </button> 
+                <ul class="dropdown-menu" >
+                <li ><a class="dropdown-item"> RPAs </a></li>
+                <li><a class="dropdown-item" > Solution Architect </a></li>
+                <li><a class="dropdown-item" > Software Development </a></li>
+                <li><a class="dropdown-item" > UX Designer </a></li>
+                <li><a class="dropdown-item" > Agile/Scrum </a></li>
+                <li><a class="dropdown-item" > Dev Ops </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li ><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+            <button id="SkillMargin" type="button" class="btn btn-outline-secondary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Select Your Technology Skill
+            </button>
+           
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> RPA </a></li>
+                <li><a class="dropdown-item" > Solution Architect </a></li>
+                <li><a class="dropdown-item" > Software Development </a></li>
+                <li><a class="dropdown-item" > UX Designer </a></li>
+                <li><a class="dropdown-item" > Agile/Scrum </a></li>
+                <li><a class="dropdown-item" > Dev Ops </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+           
+               <p> </p>
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-secondary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+           <div class="col-md-8">
+
+             <p> </p>
+          <div class="btn-group">
+            <button id="SkillMargin" type="button" class="btn btn-outline-secondary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Select Your Technology Skill
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> RPA </a></li>
+                <li><a class="dropdown-item" > Solution Architect </a></li>
+                <li><a class="dropdown-item" > Software Development </a></li>
+                <li><a class="dropdown-item" > UX Designer </a></li>
+                <li><a class="dropdown-item" > Agile/Scrum </a></li>
+                <li><a class="dropdown-item" > Dev Ops </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+            <p> </p>
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+           <div class="col-md-8">
+
+             <p> </p>
+          <div class="btn-group">
+            <button id="SkillMargin" type="button" class="btn btn-outline-secondary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Select Your Technology Skill
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> RPA </a></li>
+                <li><a class="dropdown-item" > Solution Architect </a></li>
+                <li><a class="dropdown-item" > Software Development </a></li>
+                <li><a class="dropdown-item" > UX Designer </a></li>
+                <li><a class="dropdown-item" > Agile/Scrum </a></li>
+                <li><a class="dropdown-item" > Dev Ops </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+            <p> </p>
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+           <div class="col-md-8">
+
+             <p> </p>
+          <div class="btn-group">
+            <button id="SkillMargin" type="button" class="btn btn-outline-secondary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Select Your Technology Skill
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> RPA </a></li>
+                <li><a class="dropdown-item" > Solution Architect </a></li>
+                <li><a class="dropdown-item" > Software Development </a></li>
+                <li><a class="dropdown-item" > UX Designer </a></li>
+                <li><a class="dropdown-item" > Agile/Scrum </a></li>
+                <li><a class="dropdown-item" > Dev Ops </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+            <p> </p>
+            <div class="btn-group">
+           <button id="SkillRate" type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+           <div class="col-md-8">
+
+             <p> </p>
+          <div class="btn-group">
+            <button id="SkillMargin" type="button" class="btn btn-outline-secondary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Select Your Technology Skill
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> RPA </a></li>
+                <li><a class="dropdown-item" > Solution Architect </a></li>
+                <li><a class="dropdown-item" > Software Development </a></li>
+                <li><a class="dropdown-item" > UX Designer </a></li>
+                <li><a class="dropdown-item" > Agile/Scrum </a></li>
+                <li><a class="dropdown-item" > Dev Ops </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+            <p> </p>
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+
+
+
+          </div>
+         
+        </form>
+      </div>
+
+      <div class="modal-footer">
+         
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+     <!-- END of Technology   -->
+
+     <!-- Start of Analytics   -->
+
+
+                         <p> <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#Analytics" data-bs-whatever=""> Analytics </button> </p> 
+
+                           <div class="modal fade" id="Analytics" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Analytics Skill</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+            <div class="row">
+
+        <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-success dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Analytics Skill 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> Interaction Analytics </a></li>
+                <li><a class="dropdown-item" > Reporting & Data Visualization </a></li>
+                <li><a class="dropdown-item" > Advanced Analytics </a></li>
+                <li><a class="dropdown-item" > ML - SQL </a></li>
+                <li><a class="dropdown-item" > ML - Python </a></li>
+                <li><a class="dropdown-item" > ML - R </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-success dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-success dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Analytics Skill 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> Interaction Analytics </a></li>
+                <li><a class="dropdown-item" > Reporting & Data Visualization </a></li>
+                <li><a class="dropdown-item" > Advanced Analytics </a></li>
+                <li><a class="dropdown-item" > ML - SQL </a></li>
+                <li><a class="dropdown-item" > ML - Python </a></li>
+                <li><a class="dropdown-item" > ML - R </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-success dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+            <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-success dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Analytics Skill 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> Interaction Analytics </a></li>
+                <li><a class="dropdown-item" > Reporting & Data Visualization </a></li>
+                <li><a class="dropdown-item" > Advanced Analytics </a></li>
+                <li><a class="dropdown-item" > ML - SQL </a></li>
+                <li><a class="dropdown-item" > ML - Python </a></li>
+                <li><a class="dropdown-item" > ML - R </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-success dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+           <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-success dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Analytics Skill 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> Interaction Analytics </a></li>
+                <li><a class="dropdown-item" > Reporting & Data Visualization </a></li>
+                <li><a class="dropdown-item" > Advanced Analytics </a></li>
+                <li><a class="dropdown-item" > ML - SQL </a></li>
+                <li><a class="dropdown-item" > ML - Python </a></li>
+                <li><a class="dropdown-item" > ML - R </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-success dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+            <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-success dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Analytics Skill 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> Interaction Analytics </a></li>
+                <li><a class="dropdown-item" > Reporting & Data Visualization </a></li>
+                <li><a class="dropdown-item" > Advanced Analytics </a></li>
+                <li><a class="dropdown-item" > ML - SQL </a></li>
+                <li><a class="dropdown-item" > ML - Python </a></li>
+                <li><a class="dropdown-item" > ML - R </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-success dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+            <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-success dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Analytics Skill 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> Interaction Analytics </a></li>
+                <li><a class="dropdown-item" > Reporting & Data Visualization </a></li>
+                <li><a class="dropdown-item" > Advanced Analytics </a></li>
+                <li><a class="dropdown-item" > ML - SQL </a></li>
+                <li><a class="dropdown-item" > ML - Python </a></li>
+                <li><a class="dropdown-item" > ML - R </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-success dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+
+
+
+          </div>
+         
+        </form>
+      </div>
+
+      <div class="modal-footer">
+         
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+                         <p> <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#ProcessExcellence" data-bs-whatever=""> Process Excellence </button> </p> 
+
+                         <div class="modal fade" id="ProcessExcellence" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Process Excellence Skill</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+            <div class="row">
+
+        <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-danger dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Process Excellence 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> Lean Six Sigma </a></li>
+                <li><a class="dropdown-item" > Design Thinking </a></li>
+                <li><a class="dropdown-item" > Customer Journey/Process Mapping </a></li>
+                <li><a class="dropdown-item" > Process Consulting (Client-facing) </a></li>
+                <li><a class="dropdown-item" > Workforce Optimization </a></li>
+                <li><a class="dropdown-item" > Project Management </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-danger dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+         <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-danger dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Process Excellence 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> Lean Six Sigma </a></li>
+                <li><a class="dropdown-item" > Design Thinking </a></li>
+                <li><a class="dropdown-item" > Customer Journey/Process Mapping </a></li>
+                <li><a class="dropdown-item" > Process Consulting (Client-facing) </a></li>
+                <li><a class="dropdown-item" > Workforce Optimization </a></li>
+                <li><a class="dropdown-item" > Project Management </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-danger dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+           <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-danger dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Process Excellence 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> Lean Six Sigma </a></li>
+                <li><a class="dropdown-item" > Design Thinking </a></li>
+                <li><a class="dropdown-item" > Customer Journey/Process Mapping </a></li>
+                <li><a class="dropdown-item" > Process Consulting (Client-facing) </a></li>
+                <li><a class="dropdown-item" > Workforce Optimization </a></li>
+                <li><a class="dropdown-item" > Project Management </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-danger dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+           <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-danger dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Process Excellence 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> Lean Six Sigma </a></li>
+                <li><a class="dropdown-item" > Design Thinking </a></li>
+                <li><a class="dropdown-item" > Customer Journey/Process Mapping </a></li>
+                <li><a class="dropdown-item" > Process Consulting (Client-facing) </a></li>
+                <li><a class="dropdown-item" > Workforce Optimization </a></li>
+                <li><a class="dropdown-item" > Project Management </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-danger dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-danger dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Process Excellence 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> Lean Six Sigma </a></li>
+                <li><a class="dropdown-item" > Design Thinking </a></li>
+                <li><a class="dropdown-item" > Customer Journey/Process Mapping </a></li>
+                <li><a class="dropdown-item" > Process Consulting (Client-facing) </a></li>
+                <li><a class="dropdown-item" > Workforce Optimization </a></li>
+                <li><a class="dropdown-item" > Project Management </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-danger dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-danger dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Process Excellence 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> Lean Six Sigma </a></li>
+                <li><a class="dropdown-item" > Design Thinking </a></li>
+                <li><a class="dropdown-item" > Customer Journey/Process Mapping </a></li>
+                <li><a class="dropdown-item" > Process Consulting (Client-facing) </a></li>
+                <li><a class="dropdown-item" > Workforce Optimization </a></li>
+                <li><a class="dropdown-item" > Project Management </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-danger dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+
+
+
+          </div>
+         
+        </form>
+      </div>
+
+      <div class="modal-footer">
+         
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+                         <p> <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#Domain" data-bs-whatever=""> Domain </button> </p>
+                         
+                         <div class="modal fade" id="Domain" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Domain Skill</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+            <div class="row">
+
+        <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-warning dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Domain 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> Contact Center Operations </a></li>
+                <li><a class="dropdown-item" > B2B/B2C Sales </a></li>
+                <li><a class="dropdown-item" > Back-Office </a></li>
+                <li><a class="dropdown-item" > Collections </a></li>
+                <li><a class="dropdown-item" > Business Research </a></li>
+                <li><a class="dropdown-item" > Content Moderation </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-warning dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-warning dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Domain 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> Contact Center Operations </a></li>
+                <li><a class="dropdown-item" > B2B/B2C Sales </a></li>
+                <li><a class="dropdown-item" > Back-Office </a></li>
+                <li><a class="dropdown-item" > Collections </a></li>
+                <li><a class="dropdown-item" > Business Research </a></li>
+                <li><a class="dropdown-item" > Content Moderation </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-warning dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+             <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-warning dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Domain 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> Contact Center Operations </a></li>
+                <li><a class="dropdown-item" > B2B/B2C Sales </a></li>
+                <li><a class="dropdown-item" > Back-Office </a></li>
+                <li><a class="dropdown-item" > Collections </a></li>
+                <li><a class="dropdown-item" > Business Research </a></li>
+                <li><a class="dropdown-item" > Content Moderation </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-warning dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+            <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-warning dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Domain 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> Contact Center Operations </a></li>
+                <li><a class="dropdown-item" > B2B/B2C Sales </a></li>
+                <li><a class="dropdown-item" > Back-Office </a></li>
+                <li><a class="dropdown-item" > Collections </a></li>
+                <li><a class="dropdown-item" > Business Research </a></li>
+                <li><a class="dropdown-item" > Content Moderation </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-warning dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+           <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-warning dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Domain 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> Contact Center Operations </a></li>
+                <li><a class="dropdown-item" > B2B/B2C Sales </a></li>
+                <li><a class="dropdown-item" > Back-Office </a></li>
+                <li><a class="dropdown-item" > Collections </a></li>
+                <li><a class="dropdown-item" > Business Research </a></li>
+                <li><a class="dropdown-item" > Content Moderation </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-warning dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+            <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-warning dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Domain 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> Contact Center Operations </a></li>
+                <li><a class="dropdown-item" > B2B/B2C Sales </a></li>
+                <li><a class="dropdown-item" > Back-Office </a></li>
+                <li><a class="dropdown-item" > Collections </a></li>
+                <li><a class="dropdown-item" > Business Research </a></li>
+                <li><a class="dropdown-item" > Content Moderation </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-warning dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+
+
+
+          </div>
+         
+        </form>
+      </div>
+
+      <div class="modal-footer">
+         
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+                          <p> <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#Industry" data-bs-whatever=""> Industry </button> </p> 
+
+                           <div class="modal fade" id="Industry" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Industry Skill</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+            <div class="row">
+
+        <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-info dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Industry 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> BFSI </a></li>
+                <li><a class="dropdown-item" > Healthcare & Life Sciences </a></li>
+                <li><a class="dropdown-item" > Telecom, Media & Technology </a></li>
+                <li><a class="dropdown-item" > Retail & Ecommerce </a></li>
+                <li><a class="dropdown-item" > Travel, Logistic & Hospitality </a></li>
+                <li><a class="dropdown-item" > Automotive, Energy & Utilities </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-info dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+         <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-info dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Industry 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> BFSI </a></li>
+                <li><a class="dropdown-item" > Healthcare & Life Sciences </a></li>
+                <li><a class="dropdown-item" > Telecom, Media & Technology </a></li>
+                <li><a class="dropdown-item" > Retail & Ecommerce </a></li>
+                <li><a class="dropdown-item" > Travel, Logistic & Hospitality </a></li>
+                <li><a class="dropdown-item" > Automotive, Energy & Utilities </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-info dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+             <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-info dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Industry 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> BFSI </a></li>
+                <li><a class="dropdown-item" > Healthcare & Life Sciences </a></li>
+                <li><a class="dropdown-item" > Telecom, Media & Technology </a></li>
+                <li><a class="dropdown-item" > Retail & Ecommerce </a></li>
+                <li><a class="dropdown-item" > Travel, Logistic & Hospitality </a></li>
+                <li><a class="dropdown-item" > Automotive, Energy & Utilities </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-info dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+           <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-info dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Industry 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> BFSI </a></li>
+                <li><a class="dropdown-item" > Healthcare & Life Sciences </a></li>
+                <li><a class="dropdown-item" > Telecom, Media & Technology </a></li>
+                <li><a class="dropdown-item" > Retail & Ecommerce </a></li>
+                <li><a class="dropdown-item" > Travel, Logistic & Hospitality </a></li>
+                <li><a class="dropdown-item" > Automotive, Energy & Utilities </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-info dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-info dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Industry 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> BFSI </a></li>
+                <li><a class="dropdown-item" > Healthcare & Life Sciences </a></li>
+                <li><a class="dropdown-item" > Telecom, Media & Technology </a></li>
+                <li><a class="dropdown-item" > Retail & Ecommerce </a></li>
+                <li><a class="dropdown-item" > Travel, Logistic & Hospitality </a></li>
+                <li><a class="dropdown-item" > Automotive, Energy & Utilities </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-info dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+            <div class="col-md-8">
+
+            <p> </p>
+          <div class="btn-group">
+        <button id="SkillMargin" type="button" class="btn btn-outline-info dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Select Your Industry 
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> BFSI </a></li>
+                <li><a class="dropdown-item" > Healthcare & Life Sciences </a></li>
+                <li><a class="dropdown-item" > Telecom, Media & Technology </a></li>
+                <li><a class="dropdown-item" > Retail & Ecommerce </a></li>
+                <li><a class="dropdown-item" > Travel, Logistic & Hospitality </a></li>
+                <li><a class="dropdown-item" > Automotive, Energy & Utilities </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-2">
+
+               <p> </p>
+           
+            <div class="btn-group">
+            <button id="SkillRate" type="button" class="btn btn-outline-info dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+             Rate
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+
+
+
+          </div>
+         
+        </form>
+      </div>
+
+      <div class="modal-footer">
+         
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+                           
+    <hr id="hr" />
+
+
+  </div>
+  </div>
+  </div>
+
+
+  <!-- Project & Case Study -->
+
+   <div class="row">
+    <div class="col">
+   <div class="shadow-lg mt-3 p-5 text-black rounded">
+       <div class="row"> 
+           <div class="col-md-10">
+    <h4 id="list-item-3" >Project & Case Study</h4> 
+           </div>
+           <div class="col-md-2">
+         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#EducationalBackground" data-bs-whatever=""><i class='fas fa-plus' style='font-size:24px'></i> </button>
+
+         <div class="modal fade" id="EducationalBackground" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Educational </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">School:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Degree:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Field of Study:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+
+             <div class="row">
+
+        <div class="col-md-6">
+            <br />
+            <p> Start Date </p>
+          <div class="btn-group">
+        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+             Month
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item">  </a></li>
+                <li><a class="dropdown-item" >  </a></li>
+                <li><a class="dropdown-item" >  </a></li>
+                <li><a class="dropdown-item" >  </a></li>
+                <li><a class="dropdown-item" >  </a></li>
+                <li><a class="dropdown-item" >  </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-6">
+              <br />
+               <p> Year Start </p>
+           
+            <div class="btn-group">
+            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+            Year
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+           <div class="col-md-6">
+               <br />
+            <p> End Date </p>
+          <div class="btn-group">
+        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+             Month
+            </button> 
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item">  </a></li>
+                <li><a class="dropdown-item" >  </a></li>
+                <li><a class="dropdown-item" >  </a></li>
+                <li><a class="dropdown-item" >  </a></li>
+                <li><a class="dropdown-item" >  </a></li>
+                <li><a class="dropdown-item" >  </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" > Separated link </a></li>
+                </ul>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-6">
+              <br />
+               <p> End Year </p>
+           
+            <div class="btn-group">
+            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+            Year
+            </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item"> 1 </a></li>
+                <li><a class="dropdown-item" > 2 </a></li>
+                <li><a class="dropdown-item" > 3 </a></li>
+               
+                </ul>
+
+            </div>
+
+          </div>
+
+          </div>
+
+          
+         
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+         </div>
+       </div>
+    <hr id="hr" />
+    <h5>Primary</h5>
+    <a>Espiritu Santo Parochial School</a>
+    <p>2016 - 2019</p>
+
+    <br />
+
+    <h5>Secondary</h5>
+    <a>Espiritu Santo Parochial School</a>
+    <p>2016 - 2019</p>
+
+    <br />
+
+    <h5>Tertiary</h5>
+    <a>University of Batangas</a>
+    <p>Bachelor of Science in Information of Technology</p>
+    <a>2016 - 2019</a>
+
+</div>
+  </div>
+  
+  <div class="col-lg-4">
+   <div class="shadow-lg mt-3 p-5 text-black rounded">
+       <div class="row">
+           <div class="col-md-10">
+       <h4>Horizontal & Vertical</h4> 
+       </div>
+       
+
+    </div>
+    <hr id="hr" />
+
+                  
+                           
+    <hr id="hr" />
+
+
+  </div>
+  </div>
+  </div>
+
+  <!-- END Project & Case Study -->
+
+
+
+
+
+   <!-- Training & Certificates -->
+
+   <div class="row">
+        <div class="col-lg-8">
+            <div class="shadow-lg mt-3 p-5 text-black rounded">
+                <div class="row"> 
+                     <div class="col-md-10">
+                        <h4 id="list-item-4" >Training & Certificates</h4> 
+                    </div>
+                          <div class="col-md-2">
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Training" data-bs-whatever=""><i class='fas fa-plus' style='font-size:24px'></i> </button>
+                             <div class="modal fade" id="Training" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                 <div class="modal-content">
+                                    <div class="modal-header">
+                                         <h1 class="modal-title fs-5" id="exampleModalLabel">Add Certificates </h1>
+                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                            <div class="modal-body">
+                                                        <form>
+                                                          <div class="mb-3">
+                                                            <label for="recipient-name" class="col-form-label">Name of Certificates:</label>
+                                                            <input type="text" class="form-control" id="recipient-name">
+                                                          </div>
+                                                          <div class="mb-3">
+                                                            <label for="recipient-name" class="col-form-label">Issuing Organization:</label>
+                                                            <input type="text" class="form-control" id="recipient-name">
+                                                          </div>
+
+
+                                                             <div class="row">
+
+                                                        <div class="col-md-6">
+                                                            <br />
+                                                            <p> Start Date </p>
+                                                          <div class="btn-group">
+                                                        <button id="MonthBtn" type="button" class="btn btn-outline-secondary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+                                                             Month
+                                                            </button> 
+                                                                <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item">  </a></li>
+                                                                <li><a class="dropdown-item" >  </a></li>
+                                                                <li><a class="dropdown-item" >  </a></li>
+                                                                <li><a class="dropdown-item" >  </a></li>
+                                                                <li><a class="dropdown-item" >  </a></li>
+                                                                <li><a class="dropdown-item" >  </a></li>
+                                                                <li><hr class="dropdown-divider"></li>
+                                                                <li><a class="dropdown-item" > Separated link </a></li>
+                                                                </ul>
+                                                            </div>
+
+
+                                                          </div>
+
+                                                          <div class="col-md-6">
+                                                              <br />
+                                                               <p> Year Start </p>
+           
+                                                            <div class="btn-group">
+                                                            <button id="YrBtn" type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            Year
+                                                            </button>
+                                                                <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item"> 1 </a></li>
+                                                                <li><a class="dropdown-item" > 2 </a></li>
+                                                                <li><a class="dropdown-item" > 3 </a></li>               
+                                                                </ul>
+                                                            </div>
+                                                          </div>          
+                                                          </div>                  
+                                                        </form>
+                                                              </div>
+                                                              <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Save</button>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                           </div>
+                                                                 </div>
+                                                                         <hr  id="hr" />
+
+    <h5>Amazon Web Cloud</h5>
+    <a>UP Diliman Campus</a>
+    <p>2016 - 2019</p>
+
+    <h5>Amazon Web Cloud</h5>
+    <a>UP Diliman Campus</a>
+    <p>2016 - 2019</p>
+
+    <h5>Amazon Web Cloud</h5>
+    <a>UP Diliman Campus</a>
+    <p>2016 - 2019</p>
+
+</div>
+  </div>
+  
+ 
+  </div>
+
+  <!-- END Training and Certificates -->
+
+
+
+    </div>
+               
+        </div>
+ 
+ 
+
+</body>
+</html>
