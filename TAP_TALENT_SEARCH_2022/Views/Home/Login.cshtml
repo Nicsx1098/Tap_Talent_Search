@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Teleperformance_Search_Project</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Teleperformance_Search_Project.styles.css" asp-append-version="true" />
+</head>
+<body>
+
+    <br />
+     <br />
+      <br />
+
+       <br />
+
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start">
+ 
+  <!-- Jumbotron -->
+  <div class="container py-4">
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+          <div class="card-body p-5 shadow-5 text-center">
+            <h2 class="fw-bold mb-5">Welcome to TAP Talent search</h2>
+            <form action="Index" method="post">
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+      
+
+              <!-- UserName input -->
+              <div class="form-outline mb-3">
+                <input type="text" id="form3Example3" class="form-control" name="CcmsIdent" />
+                <label class="form-label" for="form3Example3">Ccms Ident</label>
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-3">
+                <input type="password" id="form3Example4" class="form-control" name="FirstName" />
+                <label class="form-label" for="form3Example4">Password</label>
+
+              </div>
+
+              <div>
+                  <p>@TempData["Login_Error"]</p>
+
+              </div>
+
+
+              <!-- Submit button -->
+             
+              <button class="btn btn-warning btn-block mb-4" type="submit" >Sign In <i class='fas fa-sign-in-alt'></i></button>
+
+              
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <img src="~/lib/Teleperformance_1.jpg" class="w-100 rounded-4 shadow-4"
+          alt="" />
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+</body>
+</html>

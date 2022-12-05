@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<html lang="en">
+ <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TAP_TALENT_SEARCH_2022</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/Filter.css" asp-append-version="true" />
+   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+   <script src="~/js/site.js"></script>
+
+</head>
+  <body>
+
+<!-- Navbar-->
+                    <nav class="navbar navbar-expand-lg navbar-light" id="navbar_top">
+                                <div class="container-fluid justify-content-between">
+                                        <ul class="navbar-nav flex-row">
+                                            
+                                        </ul>
+                         <!-- Left elements -->
+                                     <div class="d-flex">
+                                                <!-- Brand -->
+                                            <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#"><img src="/lib/logo_1.png" height="60" alt="MDB Logo" loading="lazy" style="margin-top: 2px;"/></a>
+             <!-- Search form -->           <form class="input-group w-auto my-auto d-none d-sm-flex">
+                                            <input  id="listSearch" autocomplete="on" type="text" class="form-control rounded" placeholder="Search" style="min-width: 125px;"/>
+                                            </form>
+                                            </div>
+                        <!-- Left elements -->
+
+    <!-- Center elements -->
+                        <ul class="navbar-nav flex-row d-none d-md-flex">
+                            <li class="nav-item me-3 me-lg-1 active">
+                                 <a class="nav-link" href="#">
+                                <i id="Homebtn" class='fas fa-house-user' style='font-size:28px'></i>
+                                 </a>
+                                Home 
+                             </li>
+
+                              <li class="nav-item me-3 me-lg-1">
+                                <a class="nav-link" href="#">
+                                 <i  id="Homebtn" class='fas fa-user-circle' style='font-size:28px'></i>
+                                </a>
+                                Profile
+                              </li>
+
+                              <li class="nav-item me-3 me-lg-1">
+                                <a class="nav-link" href="#">
+                                 <i  id="Homebtn" class='fas fa-info-circle' style='font-size:28px'></i>
+                                </a>
+                                About
+                              </li>
+
+                             
+                              <li class="nav-item me-3 me-lg-1">
+                                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+    <!-- Right elements -->                                  
+                                             <div class="dropdown text-end">
+                                              <a href="#" class="d-block link-dark text-decoration-none " data-bs-toggle="dropdown" aria-expanded="false">
+                                              <i id="ProfileBtn" class='fas fa-user-circle' style='font-size:28px'></i>
+                                              </a>
+                                              <ul class="dropdown-menu text-small">
+                                                <li><a class="dropdown-item">Nicolo Azares</a></li>
+                                                <li><a class="dropdown-item">Software Developer</a></li>
+                                                <li><a class="dropdown-item">Taguig City,Philippines</a></li>
+
+                                                <li class="BtnProfile"> <a class="btn btn-outline-secondary" id="NameBtn" href="#" role="button">View Profile</a></li>
+
+                                                <li><hr id="hr" class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                                <li><hr id="hr" class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                                              </ul>
+                                            </div>
+                                      </div>
+                                     <label id="Me" >Me</label>
+                                                  </li>
+
+                                                   <li class="nav-item me-3 me-lg-1">
+                               <div class="vl"></div> 
+                              </li>
+
+                              <li class="nav-item me-3 me-lg-1">
+                                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                                     
+                                             <div class="dropdown text-end">
+                                              <a href="#" class="d-block link-dark text-decoration-none " data-bs-toggle="dropdown" aria-expanded="false">
+                                              <i id="page" class="fa fa-bars" style="font-size:28px"></i>
+                                              </a>
+                                              <ul id="DropdownPages" class="dropdown-menu text-small">  
+                                                  
+                                              <li class="BtnProfile"> <a class="btn btn-outline-secondary" id="NameBtns" role="button" href="#list-item-1">User Area</a></li>
+                                              <li class="BtnProfile"> <a class="btn btn-outline-secondary" id="NameBtns1" role="button" href="#list-item-2">Educational</a></li>
+                                              <li class="BtnProfile"> <a class="btn btn-outline-secondary" id="NameBtns2"  role="button" href="#list-item-3">Projects </a></li>
+                                              <li class="BtnProfile"> <a class="btn btn-outline-secondary" id="NameBtns3" role="button" href="#list-item-4">Training & Certificates</a></li>
+
+                                              </ul>
+                                            </div>
+                                      </div>
+                                     <label id="Pages">Page</label>
+                              </li>
+                                                </ul>
+                                                <ul class="navbar-nav flex-row"> </ul>
+   
+                                              </div>
+                                            </nav>
+
+
+
+
+
+         <nav class="navbar navbar-expand-lg navbar-light" id="navbar_tops">
+                                <div class="container-fluid justify-content-between">
+
+                                        <ul class="navbar-nav flex-row"> </ul>
+                         <!-- Left elements -->
+                                     <div class="d-flex">
+                                            
+                                        
+                                   
+
+                                      </div>
+                        <!-- Left elements -->
+
+    <!-- Center elements -->
+                        
+                                                <ul class="navbar-nav flex-row">  </ul>
+                                                   <ul class="navbar-nav flex-row">  </ul>
+   
+                                </div>
+        </nav>
+
+                                          
+   <!-- End Navbar Search and side bar button  -->
+
+
+
+   <!-- User Profile With Edit Button  -->
+
+    <div class="container mt-3">             
+                <div class="row"> 
+                        <div class="col">   
+                            <div class="shadow-lg mt-3 p-5 text-black rounded">
+  <ul class="list-group" id="myList">
+   
+   <li class="list-group-item"><h5><a href="@Url.Action("Result", "Home")" class="elements">Nicolo Azares</a></h5><p>Software Developer</p><p>Taguig City</p></li>
+    <li class="list-group-item"><h5><a href="#">Tristan Cervantes</a></h5><p>Desktop Engineer</p><p>Iloilo City</p></li>
+   <li class="list-group-item"><h5>Lester Escobar</h5><p>Full Stack developer</p><p>Cebu city</p></li>
+  <li class="list-group-item"><h5>George Castellanos</h5><p>RPA Developer</p><p>Cavite City</p></li>
+  </ul>
+    <!-- User Profile to View   
+         <table class="table align-middle mb-0 bg-white">
+
+                    <form method="get" asp-action="UserSearch"> 
+                                <p>
+                                    <select class="btn btn-outline-secondary dropdown-toggle"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="SelectType" value="@ViewData["GetSelectType"]">
+                                                                            <option >Columns</option>                         
+                                                                            <option > CCMS </option>  
+                                                                             <option > FirstName </option> 
+                                                                             <option > LastName </option> 
+                                                                             <option > Position </option> 
+                                                                             <option > Background </option>
+                                       
+                                    </select>
+                         <input type="search" placeholder="Enter Details" value="" name="EmpSearch" style="width:500px" />
+                        <input type="submit" value="Search" class="btn btn-danger"/>
+                        
+                                 </p>
+                    
+
+                    
+                       </form>
+                <thead class="bg-light">
+                         <tr>
+                            <th>
+                             CCMS
+                            </th>
+                            <th>
+                            FirstName
+                            </th>
+                            <th>
+                             LastName
+                            </th>
+                            <th>
+                             Position
+                            </th>
+                            <th>
+                             Background
+                            </th>
+            
+                           
+                         </tr>
+                 </thead>
+   <tbody>
+
+        <tr>
+            <td>
+                3483105
+            </td>
+            <td>
+               Kent
+            </td>
+            <td>
+              Natividad
+            </td>
+            <td>
+                Full Stack developer
+            </td>
+            <td>
+                Sixsigma
+            </td>
+             
+            
+        </tr>
+        <tr>
+            <td>
+                3483105
+            </td>
+            <td>
+               Nicolo
+            </td>
+            <td>
+              Azares
+            </td>
+            <td>
+                Desktop engineer
+            </td>
+            <td>
+                Sixsigma
+            </td>
+             
+            
+        </tr>
+         <tr>
+            <td>
+                3483105
+            </td>
+            <td>
+               ken
+            </td>
+            <td>
+              co
+            </td>
+            <td>
+                Full Stack developer
+            </td>
+            <td>
+                Testing
+            </td>
+             
+            
+        </tr>
+
+    </tbody>
+</table>  -->
+
+
+                 </div>
+                       </div>
+                            </div>
+                                     </div>
+
+ <!-- END User Profile to View    -->
+
+
+
+
+
+
+</body>
+</html>
